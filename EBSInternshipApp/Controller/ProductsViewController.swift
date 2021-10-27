@@ -118,21 +118,6 @@ extension ProductsViewController: UICollectionViewDelegate, UICollectionViewData
         data1.append(dataItem)
         performSegue(withIdentifier: "segue", sender: self)
     }
-    
-    //moved to ViewController1
-    //    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-    //        let dataItem = data[indexPath.row]
-    //        print(data[indexPath.row])
-    //        let productInfoCell = collectionView.cellForItem(at: indexPath) as? ProductInfoCell
-    ////        print(dataItem)
-    //        productInfoCell!.configure1(with: dataItem)
-    //
-    //        performSegue(withIdentifier: "segue", sender: self)
-    //    }
-    
-    
-    //    func cellForItem(at indexPath: IndexPath) -> UICollectionViewCell? { }
-    
 }
 
 //MARK: - UICollectionViewDelegateFlowLayout

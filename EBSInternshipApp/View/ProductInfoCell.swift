@@ -33,7 +33,7 @@ class ProductInfoCell: UICollectionViewCell {
         productPriceLabel.text = "$\(data.price),-"
         productPastPriceLabel.text = "$\(data.price),-"
         productDescriptionLabel.text = data.details
-//        productImage.set(imageURL: data.category.icon)
+        productImage.set(imageURL: data.category.icon)
     }
     
     private func configureFonts() {

@@ -21,7 +21,6 @@ class ProductCell: UICollectionViewCell {
     @IBOutlet weak var productActualPriceLabel: UILabel!
     @IBOutlet weak var productPastPriceLabel: UILabel!
     @IBOutlet weak var productImage: IconView!
-    //    @IBOutlet private weak var heartButton: UIButton!
     
     weak var delegate: ProductCellDelegate?
     static let identifier = "ProductCell"
@@ -30,7 +29,6 @@ class ProductCell: UICollectionViewCell {
     //MARK: - Lifecycle
     override func layoutSubviews() {
         super.layoutSubviews()
-        //        heartButton.layer.cornerRadius = heartButton.bounds.height / 2
     }
     
     override func awakeFromNib() {

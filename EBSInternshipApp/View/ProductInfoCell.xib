@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ProductInfoCell" id="i3P-Al-52c" customClass="ProductInfoCell" customModule="EBSInternshipApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="729"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="jTW-pd-cQJ">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="729"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GDE-Sv-Y42">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="729"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Mcs-Nb-q4T">
+                                <rect key="frame" x="20" y="23" width="335" height="251"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="251" id="891-7P-FCP"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apple iPhone X" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XeY-am-uM7">
+                                <rect key="frame" x="15" y="334" width="345" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iOS, ecran tactil 5.8&quot;, GPS, 64 GB, 12 mpx" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Trx-ZK-rtW">
+                                <rect key="frame" x="15" y="365" width="345" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="$ 980,-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="813-bJ-AFx">
+                                <rect key="frame" x="138" y="396" width="58" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="$ 980,-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IGi-fd-yYe">
+                                <rect key="frame" x="213" y="396" width="58" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Information" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ng7-0G-KDR">
+                                <rect key="frame" x="20" y="465" width="335" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d5O-Yd-DJA">
+                                <rect key="frame" x="20" y="506" width="335" height="162.5"/>
+                                <string key="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Trx-ZK-rtW" firstAttribute="leading" secondItem="GDE-Sv-Y42" secondAttribute="leading" constant="15" id="53a-kS-AT4"/>
+                            <constraint firstItem="d5O-Yd-DJA" firstAttribute="leading" secondItem="GDE-Sv-Y42" secondAttribute="leading" constant="20" id="9Zd-io-48u"/>
+                            <constraint firstItem="Mcs-Nb-q4T" firstAttribute="leading" secondItem="GDE-Sv-Y42" secondAttribute="leading" constant="20" id="AhU-W9-4h3"/>
+                            <constraint firstItem="Mcs-Nb-q4T" firstAttribute="top" secondItem="GDE-Sv-Y42" secondAttribute="top" constant="23" id="Cxn-IZ-f8l"/>
+                            <constraint firstItem="IGi-fd-yYe" firstAttribute="leading" secondItem="813-bJ-AFx" secondAttribute="trailing" constant="12" id="EBr-2U-lnI"/>
+                            <constraint firstAttribute="trailing" secondItem="XeY-am-uM7" secondAttribute="trailing" constant="15" id="GVs-xs-IZ1"/>
+                            <constraint firstAttribute="trailing" secondItem="d5O-Yd-DJA" secondAttribute="trailing" constant="20" id="HK1-1D-eJK"/>
+                            <constraint firstItem="XeY-am-uM7" firstAttribute="top" secondItem="Mcs-Nb-q4T" secondAttribute="bottom" constant="60" id="JMj-xY-oVi"/>
+                            <constraint firstItem="813-bJ-AFx" firstAttribute="top" secondItem="Trx-ZK-rtW" secondAttribute="bottom" constant="10" id="LsI-39-zF6"/>
+                            <constraint firstItem="Ng7-0G-KDR" firstAttribute="leading" secondItem="GDE-Sv-Y42" secondAttribute="leading" constant="20" id="OcT-B7-ulR"/>
+                            <constraint firstItem="Ng7-0G-KDR" firstAttribute="top" secondItem="813-bJ-AFx" secondAttribute="bottom" constant="48" id="QOr-Ji-aZd"/>
+                            <constraint firstItem="IGi-fd-yYe" firstAttribute="top" secondItem="Trx-ZK-rtW" secondAttribute="bottom" constant="10" id="Uuj-qd-NBh"/>
+                            <constraint firstItem="813-bJ-AFx" firstAttribute="leading" secondItem="GDE-Sv-Y42" secondAttribute="leading" constant="138" id="VNK-It-0g4"/>
+                            <constraint firstItem="Trx-ZK-rtW" firstAttribute="top" secondItem="XeY-am-uM7" secondAttribute="bottom" constant="10" id="Y85-VV-ko2"/>
+                            <constraint firstAttribute="trailing" secondItem="Mcs-Nb-q4T" secondAttribute="trailing" constant="20" id="cHa-Sz-Tas"/>
+                            <constraint firstAttribute="trailing" secondItem="IGi-fd-yYe" secondAttribute="trailing" constant="138" id="mp1-CW-Abw"/>
+                            <constraint firstAttribute="trailing" secondItem="Trx-ZK-rtW" secondAttribute="trailing" constant="15" id="sRT-Be-PBE"/>
+                            <constraint firstItem="XeY-am-uM7" firstAttribute="leading" secondItem="GDE-Sv-Y42" secondAttribute="leading" constant="15" id="sVt-PE-ygQ"/>
+                            <constraint firstAttribute="trailing" secondItem="Ng7-0G-KDR" secondAttribute="trailing" constant="20" id="uqw-zg-JWy"/>
+                            <constraint firstItem="d5O-Yd-DJA" firstAttribute="top" secondItem="Ng7-0G-KDR" secondAttribute="bottom" constant="20" id="yqV-JT-YJo"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="GDE-Sv-Y42" firstAttribute="leading" secondItem="jTW-pd-cQJ" secondAttribute="leading" id="8oo-tL-7LT"/>
+                    <constraint firstAttribute="bottom" secondItem="GDE-Sv-Y42" secondAttribute="bottom" id="hKZ-dM-bBg"/>
+                    <constraint firstItem="GDE-Sv-Y42" firstAttribute="top" secondItem="jTW-pd-cQJ" secondAttribute="top" id="mxW-gD-qr9"/>
+                    <constraint firstAttribute="trailing" secondItem="GDE-Sv-Y42" secondAttribute="trailing" id="tPj-XW-yTY"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="269" height="729"/>
+            <connections>
+                <outlet property="productDescriptionLabel" destination="d5O-Yd-DJA" id="Sn2-Sp-P9D"/>
+                <outlet property="productImage" destination="Mcs-Nb-q4T" id="ILb-ga-gy9"/>
+                <outlet property="productNameLabel" destination="XeY-am-uM7" id="ktX-UX-aHh"/>
+                <outlet property="productPastPriceLabel" destination="IGi-fd-yYe" id="2Ei-9H-vZw"/>
+                <outlet property="productPriceLabel" destination="813-bJ-AFx" id="b0f-3l-IKk"/>
+                <outlet property="productShortDescriptionLabel" destination="Trx-ZK-rtW" id="bCg-bT-xf6"/>
+            </connections>
+            <point key="canvasLocation" x="238.40579710144928" y="-5.0223214285714279"/>
+        </collectionViewCell>
+    </objects>
+</document>

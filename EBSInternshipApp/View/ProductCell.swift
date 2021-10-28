@@ -60,8 +60,5 @@ class ProductCell: UICollectionViewCell {
         productActualPriceLabel.font = UIFont(name: "OpenSans-Semibold", size: 16)
         productPastPriceLabel.font = UIFont(name: "OpenSans-Semibold", size: 11)
     }
-    
-    
-    
 }
 

@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ProductsViewController.swift
 //  EBSInternshipApp
 //
 //  Created by Rauh Andrei on 18.10.2021.
@@ -16,11 +16,9 @@ class ProductsViewController: UIViewController, ProductsViewControllerType {
     
     //MARK: - Variables
     var data: [ProductData] = []
-    var data1: [ProductData] = []
+    var dataForSelectedVC: [ProductData] = []
     
     var presenter: ViewControllerDelegate?
-    
-    private var isGridLayout: Bool = false
     
     // MARK: - Outlets
     @IBOutlet private weak var listButton: UIButton!
@@ -28,7 +26,6 @@ class ProductsViewController: UIViewController, ProductsViewControllerType {
     @IBOutlet private weak var collectionView: UICollectionView!
     @IBOutlet weak var filterButton: UILabel!
     @IBOutlet weak var myCartButton: UIButton!
-    @IBOutlet weak var countOfCart: UILabel!
     
     //MARK: - Lifecycle
     override func viewDidLoad() {
@@ -75,21 +72,10 @@ class ProductsViewController: UIViewController, ProductsViewControllerType {
         myCartButton.titleLabel?.font = UIFont(name: "OpenSans-Bold", size: 13)
     }
     
-    //MARK: - Actions
-    @IBAction private func listButtonTap(_ sender: Any) {
-        isGridLayout = false
-        collectionView.reloadData()
-    }
-    
-    @IBAction private func gridButtonTap(_ sender: Any) {
-        isGridLayout = true
-        collectionView.reloadData()
-    }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
         let vc = segue.destination as! SelectedProductViewController
-        vc.dataToShow = data1
+        vc.dataToShow = dataForSelectedVC
     }
 }
 
@@ -114,8 +100,8 @@ extension ProductsViewController: UICollectionViewDelegate, UICollectionViewData
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let dataItem = data[indexPath.row]
-        data1.removeAll()
-        data1.append(dataItem)
+        dataForSelectedVC.removeAll()
+        dataForSelectedVC.append(dataItem)
         performSegue(withIdentifier: "segue", sender: self)
     }
 }
@@ -125,23 +111,15 @@ extension ProductsViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width: CGFloat = collectionView.bounds.width
-        if isGridLayout {
-            return CGSize(width: width / 2 - 1, height: 206)
-        }
         return CGSize(width: width, height: 206)
     }
 }
 
-//////////
+
 extension ProductsViewController: ProductCellDelegate {
     
     func cellDidTappedLikeButton(_ cell: ProductCell) {
-        guard let cellIndexPath = collectionView.indexPath(for: cell) else { return }
-        //достать data и выгрузить в database
-        let dataItem = data[cellIndexPath.row]
-        //сохранить в базу данных
-        
-        //        data1.append(dataItem)
+    
     }
     
     func cellDidTappedCartButton(_ cell: ProductCell) {

@@ -27,7 +27,7 @@ class ProductInfoCell: UICollectionViewCell {
     }
     
     //MARK: - Configure
-    func configure1(with data: ProductData) {
+    func configure(with data: ProductData) {
         productNameLabel.text = data.name
         productShortDescriptionLabel.text = "\(data.size) - \(data.colour)"
         productPriceLabel.text = "$\(data.price),-"

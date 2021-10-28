@@ -25,69 +25,63 @@
                                     <constraint firstAttribute="height" constant="251" id="891-7P-FCP"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apple iPhone X" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XeY-am-uM7">
-                                <rect key="frame" x="15" y="334" width="345" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iOS, ecran tactil 5.8&quot;, GPS, 64 GB, 12 mpx" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Trx-ZK-rtW">
-                                <rect key="frame" x="15" y="364.5" width="345" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="mpN-kg-KAY">
-                                <rect key="frame" x="10" y="395" width="355" height="20.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="zYy-aC-zH9">
+                                <rect key="frame" x="10" y="284" width="355" height="435"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$ 980,-" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="813-bJ-AFx">
-                                        <rect key="frame" x="0.0" y="0.0" width="154.5" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apple iPhone X" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XeY-am-uM7">
+                                        <rect key="frame" x="0.0" y="0.0" width="355" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$ 980,-" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IGi-fd-yYe">
-                                        <rect key="frame" x="171.5" y="0.0" width="183.5" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iOS, ecran tactil 5.8&quot;, GPS, 64 GB, 12 mpx" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Trx-ZK-rtW">
+                                        <rect key="frame" x="0.0" y="32.5" width="355" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="mpN-kg-KAY">
+                                        <rect key="frame" x="0.0" y="65" width="355" height="163"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$ 980,-" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="813-bJ-AFx">
+                                                <rect key="frame" x="0.0" y="71.5" width="169" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$ 980,-" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IGi-fd-yYe">
+                                                <rect key="frame" x="186" y="71.5" width="169" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Information" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ng7-0G-KDR">
+                                        <rect key="frame" x="0.0" y="240" width="355" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d5O-Yd-DJA">
+                                        <rect key="frame" x="0.0" y="272.5" width="355" height="162.5"/>
+                                        <string key="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Information" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ng7-0G-KDR">
-                                <rect key="frame" x="20" y="425.5" width="335" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d5O-Yd-DJA">
-                                <rect key="frame" x="20" y="466" width="335" height="162.5"/>
-                                <string key="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Trx-ZK-rtW" firstAttribute="leading" secondItem="GDE-Sv-Y42" secondAttribute="leading" constant="15" id="53a-kS-AT4"/>
-                            <constraint firstItem="d5O-Yd-DJA" firstAttribute="leading" secondItem="GDE-Sv-Y42" secondAttribute="leading" constant="20" id="9Zd-io-48u"/>
+                            <constraint firstAttribute="trailing" secondItem="zYy-aC-zH9" secondAttribute="trailing" constant="10" id="5gn-z0-Ept"/>
                             <constraint firstItem="Mcs-Nb-q4T" firstAttribute="leading" secondItem="GDE-Sv-Y42" secondAttribute="leading" constant="20" id="AhU-W9-4h3"/>
                             <constraint firstItem="Mcs-Nb-q4T" firstAttribute="top" secondItem="GDE-Sv-Y42" secondAttribute="top" constant="23" id="Cxn-IZ-f8l"/>
-                            <constraint firstAttribute="trailing" secondItem="XeY-am-uM7" secondAttribute="trailing" constant="15" id="GVs-xs-IZ1"/>
-                            <constraint firstAttribute="trailing" secondItem="d5O-Yd-DJA" secondAttribute="trailing" constant="20" id="HK1-1D-eJK"/>
-                            <constraint firstItem="XeY-am-uM7" firstAttribute="top" secondItem="Mcs-Nb-q4T" secondAttribute="bottom" constant="60" id="JMj-xY-oVi"/>
-                            <constraint firstItem="Ng7-0G-KDR" firstAttribute="leading" secondItem="GDE-Sv-Y42" secondAttribute="leading" constant="20" id="OcT-B7-ulR"/>
-                            <constraint firstItem="mpN-kg-KAY" firstAttribute="top" secondItem="Trx-ZK-rtW" secondAttribute="bottom" constant="10" id="Qv5-jS-Gb9"/>
-                            <constraint firstAttribute="trailing" secondItem="mpN-kg-KAY" secondAttribute="trailing" constant="10" id="VsT-zR-GQZ"/>
-                            <constraint firstItem="Trx-ZK-rtW" firstAttribute="top" secondItem="XeY-am-uM7" secondAttribute="bottom" constant="10" id="Y85-VV-ko2"/>
                             <constraint firstAttribute="trailing" secondItem="Mcs-Nb-q4T" secondAttribute="trailing" constant="20" id="cHa-Sz-Tas"/>
-                            <constraint firstItem="mpN-kg-KAY" firstAttribute="leading" secondItem="GDE-Sv-Y42" secondAttribute="leading" constant="10" id="o95-xg-Sg2"/>
-                            <constraint firstAttribute="trailing" secondItem="Trx-ZK-rtW" secondAttribute="trailing" constant="15" id="sRT-Be-PBE"/>
-                            <constraint firstItem="XeY-am-uM7" firstAttribute="leading" secondItem="GDE-Sv-Y42" secondAttribute="leading" constant="15" id="sVt-PE-ygQ"/>
-                            <constraint firstAttribute="trailing" secondItem="Ng7-0G-KDR" secondAttribute="trailing" constant="20" id="uqw-zg-JWy"/>
-                            <constraint firstItem="Ng7-0G-KDR" firstAttribute="top" secondItem="mpN-kg-KAY" secondAttribute="bottom" constant="10" id="uvf-QE-Irc"/>
-                            <constraint firstItem="d5O-Yd-DJA" firstAttribute="top" secondItem="Ng7-0G-KDR" secondAttribute="bottom" constant="20" id="yqV-JT-YJo"/>
+                            <constraint firstAttribute="bottom" secondItem="zYy-aC-zH9" secondAttribute="bottom" constant="10" id="jRJ-zx-g6r"/>
+                            <constraint firstItem="zYy-aC-zH9" firstAttribute="leading" secondItem="GDE-Sv-Y42" secondAttribute="leading" constant="10" id="kXi-b6-sxZ"/>
+                            <constraint firstItem="zYy-aC-zH9" firstAttribute="top" secondItem="Mcs-Nb-q4T" secondAttribute="bottom" constant="10" id="uGA-kT-oec"/>
                         </constraints>
                     </view>
                 </subviews>

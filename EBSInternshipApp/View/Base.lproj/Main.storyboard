@@ -67,11 +67,11 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dLH-go-3E9">
                                 <rect key="frame" x="15" y="88" width="384" height="51"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="200" translatesAutoresizingMaskIntoConstraints="NO" id="w8q-4O-9OF">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="w8q-4O-9OF">
                                         <rect key="frame" x="10" y="10" width="364" height="31"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="y9r-ce-iuZ">
-                                                <rect key="frame" x="0.0" y="0.0" width="92" height="31"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="81.5" height="31"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dbs-Ek-3qJ">
                                                         <rect key="frame" x="0.0" y="0.0" width="31" height="31"/>
@@ -82,7 +82,7 @@
                                                         <state key="normal" image="filterIcon"/>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="bottom" semanticContentAttribute="forceRightToLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FILTERS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3v7-JD-mLI">
-                                                        <rect key="frame" x="39" y="0.0" width="53" height="31"/>
+                                                        <rect key="frame" x="39" y="0.0" width="42.5" height="31"/>
                                                         <fontDescription key="fontDescription" name=".SFUI-Regular" family=".AppleSystemUIFont" pointSize="11"/>
                                                         <color key="textColor" name="FilterButtonColor"/>
                                                         <nil key="highlightedColor"/>
@@ -98,9 +98,6 @@
                                                             <constraint firstAttribute="width" secondItem="qgr-JS-nvi" secondAttribute="height" multiplier="1:1" id="SNy-xL-7WJ"/>
                                                         </constraints>
                                                         <state key="normal" image="listAppearance"/>
-                                                        <connections>
-                                                            <action selector="listButtonTap:" destination="c6h-bD-OXy" eventType="touchUpInside" id="BjV-t0-9sc"/>
-                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ufJ-0Y-CH2">
                                                         <rect key="frame" x="41" y="0.0" width="31" height="31"/>
@@ -108,9 +105,6 @@
                                                             <constraint firstAttribute="width" secondItem="ufJ-0Y-CH2" secondAttribute="height" multiplier="1:1" id="vtu-zT-CIJ"/>
                                                         </constraints>
                                                         <state key="normal" image="gridAppearance"/>
-                                                        <connections>
-                                                            <action selector="gridButtonTap:" destination="c6h-bD-OXy" eventType="touchUpInside" id="Cyc-ah-gVR"/>
-                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>

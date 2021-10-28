@@ -46,11 +46,10 @@ extension SelectedProductViewController: UICollectionViewDelegate, UICollectionV
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ProductInfoCell.identifier, for: indexPath) as! ProductInfoCell
-        cell.configure1(with: dataToShow![indexPath.row])
+        cell.configure(with: dataToShow![indexPath.row])
         
         return cell
     }
-    
 }
 
 //MARK: - UICollectionViewDelegateFlowLayout

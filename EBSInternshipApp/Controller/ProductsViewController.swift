@@ -12,7 +12,7 @@ protocol ProductsViewControllerType {
     func update(with data: [ProductData])
 }
 
-class ProductsViewController: UIViewController, ProductsViewControllerType {
+final class ProductsViewController: UIViewController, ProductsViewControllerType {
     
     //MARK: - Variables
     var data: [ProductData] = []
@@ -37,8 +37,10 @@ class ProductsViewController: UIViewController, ProductsViewControllerType {
         configureWOWLogo()
     }
     
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        let vc = segue.destination as! SelectedProductViewController
+        vc.dataToShow = dataForSelectedVC
     }
     
     func assemblePresenter() {
@@ -83,33 +85,33 @@ class ProductsViewController: UIViewController, ProductsViewControllerType {
             navigationItem.titleView = imageView
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        super.prepare(for: segue, sender: sender)
-        let vc = segue.destination as! SelectedProductViewController
-        vc.dataToShow = dataForSelectedVC
-    }
 }
 
 //MARK: - UICollectionViewDelegate, UICollectionViewDataSource
 
 extension ProductsViewController: UICollectionViewDelegate, UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView,
+                        numberOfItemsInSection section: Int) -> Int {
         return data.count
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    func collectionView(_ collectionView: UICollectionView,
+                        cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ProductCell.identifier, for: indexPath) as! ProductCell
         let dataItem = data[indexPath.row]
         cell.configure(with: dataItem)
-        
+        (cell as? ProductCell)?.delegate = self
         return cell
     }
     
-    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        (cell as? ProductCell)?.delegate = self
-    }
+//    func collectionView(_ collectionView: UICollectionView,
+//                        willDisplay cell: UICollectionViewCell,
+//                        forItemAt indexPath: IndexPath) {
+//        (cell as? ProductCell)?.delegate = self
+//    }
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    func collectionView(_ collectionView: UICollectionView,
+                        didSelectItemAt indexPath: IndexPath) {
         let dataItem = data[indexPath.row]
         dataForSelectedVC.removeAll()
         dataForSelectedVC.append(dataItem)
@@ -120,7 +122,9 @@ extension ProductsViewController: UICollectionViewDelegate, UICollectionViewData
 //MARK: - UICollectionViewDelegateFlowLayout
 extension ProductsViewController: UICollectionViewDelegateFlowLayout {
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width: CGFloat = collectionView.bounds.width
         return CGSize(width: width, height: 206)
     }
@@ -129,13 +133,7 @@ extension ProductsViewController: UICollectionViewDelegateFlowLayout {
 
 extension ProductsViewController: ProductCellDelegate {
     
-    func cellDidTappedLikeButton(_ cell: ProductCell) {
+    func cellDidTappedLikeButton(_ cell: ProductCell) { }
     
-    }
-    
-    func cellDidTappedCartButton(_ cell: ProductCell) {
-        
-    }
-    
-    
+    func cellDidTappedCartButton(_ cell: ProductCell) { }
 }

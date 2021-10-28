@@ -10,26 +10,21 @@ import UIKit
 protocol ProductCellDelegate: AnyObject {
     func cellDidTappedLikeButton(_ cell: ProductCell)
     func cellDidTappedCartButton(_ cell: ProductCell)
-
 }
 
 class ProductCell: UICollectionViewCell {
     
     //MARK: - Outlets
-    @IBOutlet weak var productNameLabel: UILabel!
-    @IBOutlet weak var productDescriptionLabel: UILabel!
-    @IBOutlet weak var productActualPriceLabel: UILabel!
-    @IBOutlet weak var productPastPriceLabel: UILabel!
-    @IBOutlet weak var productImage: IconView!
+    @IBOutlet private var productNameLabel: UILabel!
+    @IBOutlet private var productDescriptionLabel: UILabel!
+    @IBOutlet private var productActualPriceLabel: UILabel!
+    @IBOutlet private var productPastPriceLabel: UILabel!
+    @IBOutlet private var productImage: IconView!
     
     weak var delegate: ProductCellDelegate?
     static let identifier = "ProductCell"
     
-    
     //MARK: - Lifecycle
-    override func layoutSubviews() {
-        super.layoutSubviews()
-    }
     
     override func awakeFromNib() {
         super.awakeFromNib()

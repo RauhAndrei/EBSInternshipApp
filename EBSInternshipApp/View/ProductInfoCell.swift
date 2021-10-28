@@ -10,12 +10,12 @@ import UIKit
 class ProductInfoCell: UICollectionViewCell {
     
     //MARK: - Outlets
-    @IBOutlet weak var productImage: IconView!
-    @IBOutlet weak var productNameLabel: UILabel!
-    @IBOutlet weak var productShortDescriptionLabel: UILabel!
-    @IBOutlet weak var productPriceLabel: UILabel!
-    @IBOutlet weak var productPastPriceLabel: UILabel!
-    @IBOutlet weak var productDescriptionLabel: UILabel!
+    @IBOutlet private var productImage: IconView!
+    @IBOutlet private var productNameLabel: UILabel!
+    @IBOutlet private var productShortDescriptionLabel: UILabel!
+    @IBOutlet private var productPriceLabel: UILabel!
+    @IBOutlet private var productPastPriceLabel: UILabel!
+    @IBOutlet private var productDescriptionLabel: UILabel!
     
     //MARK: - Constants
     static let identifier = "ProductInfoCell"

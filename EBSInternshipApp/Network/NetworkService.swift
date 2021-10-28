@@ -11,12 +11,11 @@ protocol NetworkServiceType {
     func loadData(completion: @escaping (Result<[ProductData], NetworkError>) -> Void)
 }
 
-
 class NetworkService: NetworkServiceType {
     
     //MARK: - Constants
-    let session: URLSession
-    let url = URL(string: "http://mobile-shop-api.hiring.devebs.net/products")
+    private let session: URLSession
+    private let url = URL(string: "http://mobile-shop-api.hiring.devebs.net/products")
     
     init(session: URLSession) {
         self.session = session

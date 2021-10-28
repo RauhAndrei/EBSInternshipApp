@@ -12,7 +12,7 @@ protocol ViewControllerDelegate: AnyObject {
 }
 
 class ViewPresenter: ViewControllerDelegate {
-    let networkService: NetworkServiceType
+    private let networkService: NetworkServiceType
     
     init(network: NetworkServiceType) {
         self.networkService = network
@@ -28,7 +28,7 @@ class ViewPresenter: ViewControllerDelegate {
         }
     }
     
-    func handleResult(_ result: Result<[ProductData], NetworkError>,
+    private func handleResult(_ result: Result<[ProductData], NetworkError>,
                       on viewController: ProductsViewControllerType) {
         switch result {
         case let .failure(error):

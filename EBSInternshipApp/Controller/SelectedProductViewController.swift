@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SelectedProductViewController: UIViewController {
+final class SelectedProductViewController: UIViewController {
     
     //MARK: - Outlets
     @IBOutlet weak var collectionView: UICollectionView!
@@ -18,20 +18,18 @@ class SelectedProductViewController: UIViewController {
     //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         configureCollection()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        collectionView.reloadData()
+//        collectionView.reloadData()
     }
     
     //MARK: - Configure
     private func configureCollection() {
         collectionView.delegate = self
         collectionView.dataSource = self
-        
         self.collectionView.register(UINib(nibName:"ProductInfoCell", bundle: nil), forCellWithReuseIdentifier: ProductInfoCell.identifier)
     }
 }
@@ -40,14 +38,15 @@ class SelectedProductViewController: UIViewController {
 //MARK: - UICollectionViewDelegate, UICollectionViewDataSource
 extension SelectedProductViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView,
+                        numberOfItemsInSection section: Int) -> Int {
         return dataToShow?.count ?? 0
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    func collectionView(_ collectionView: UICollectionView,
+                        cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ProductInfoCell.identifier, for: indexPath) as! ProductInfoCell
         cell.configure(with: dataToShow![indexPath.row])
-        
         return cell
     }
 }
@@ -55,10 +54,11 @@ extension SelectedProductViewController: UICollectionViewDelegate, UICollectionV
 //MARK: - UICollectionViewDelegateFlowLayout
 extension SelectedProductViewController: UICollectionViewDelegateFlowLayout {
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width: CGFloat = collectionView.bounds.width
         let height: CGFloat = collectionView.bounds.height
-        
         return CGSize(width: width, height: height)
     }
 }

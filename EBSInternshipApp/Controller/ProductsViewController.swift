@@ -34,6 +34,7 @@ class ProductsViewController: UIViewController, ProductsViewControllerType {
         assemblePresenter()
         presenter?.loadData(on: self)
         configureFonts()
+        configureWOWLogo()
     }
     
     override func viewDidLayoutSubviews() {
@@ -66,10 +67,20 @@ class ProductsViewController: UIViewController, ProductsViewControllerType {
         self.collectionView.register(UINib(nibName:"ProductCell", bundle: nil), forCellWithReuseIdentifier: ProductCell.identifier)
     }
     
-    func configureFonts() {
+    private func configureFonts() {
         myCartButton.titleLabel?.font = UIFont(name: "OpenSans-Bold", size: 13)
         filterButton.font = UIFont(name: "OpenSans-Semibold", size: 12)
         myCartButton.titleLabel?.font = UIFont(name: "OpenSans-Bold", size: 13)
+    }
+    
+    private func configureWOWLogo() {
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 150, height: 40))
+        imageView.contentMode = .scaleAspectFit
+
+            let image = UIImage(named: "WOWLogo")
+            imageView.image = image
+
+            navigationItem.titleView = imageView
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

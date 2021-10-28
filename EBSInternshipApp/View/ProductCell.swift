@@ -54,7 +54,7 @@ class ProductCell: UICollectionViewCell {
         productImage.set(imageURL: data.category.icon)
     }
     
-    func configureFonts() {
+    private func configureFonts() {
         productNameLabel.font = UIFont(name: "OpenSans-Extrabold", size: 18)
         productDescriptionLabel.font = UIFont(name: "OpenSans-Regular", size: 12)
         productActualPriceLabel.font = UIFont(name: "OpenSans-Semibold", size: 16)
